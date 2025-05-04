@@ -16,6 +16,22 @@ int main()
 		cout << stack.top() << endl;
 		stack.pop();
 	}
+	cout << endl;
+
+	stack.push(rand() % 100);
+	stack.push(rand() % 100);
+	stack.push(rand() % 100);
+	stack.push(rand() % 100);
+	stack.push(rand() % 100);
+	stack.push(rand() % 100);
+	stack.push(rand() % 100);
+	stack.push(rand() % 100);
+
+	while (!stack.empty())
+	{
+		cout << stack.top() << endl;
+		stack.pop();
+	}
 
 	return 0;
 }
