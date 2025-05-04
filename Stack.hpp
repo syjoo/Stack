@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <exception>
+#include <typeinfo>
+#include <string>
 
 using namespace std;
 
@@ -24,6 +26,7 @@ public:
 	bool empty() const;
 	bool full() const;
 	void increase();
+	string type() const;
 };
 
 template <typename T>
@@ -81,6 +84,12 @@ void Stack<T>::increase()
 
 	delete[] data;
 	data = tmp;
+}
+
+template <typename T>
+string Stack<T>::type() const
+{
+	return string(typeid(*this).name());
 }
 
 #endif

@@ -33,7 +33,7 @@ int main()
 		stack.pop();
 	}
 
-	cout << "Solving Merge Confliction.\n";
+	cout << stack.type() << endl;
 
 	return 0;
 }
